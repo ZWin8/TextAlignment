@@ -1,0 +1,31 @@
+﻿<Page
+    x:Name="page"
+    x:Class="TextAlignment.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TextAlignment"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    SizeChanged="Page_SizeChanged_1">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}"> 
+        <TextBlock Text="Tap Me!" FontFamily="Matura MT Script Capitals"
+                   Tapped="TextBlock_Tapped"/>
+        <TextBlock Text="Size :" FontFamily="Matura MT Script Capitals"
+                   Margin="0 300 0 0"  Tapped="TextBlock_Tapped_1">
+            <LineBreak/>
+            <Run x:Name="HSize"/>
+            <LineBreak/>
+            <Run x:Name="VSize"/>
+            <LineBreak/>
+            Actural Size :
+            <LineBreak/>
+            <!--<Run x:Name="ActHSize" Text="{Binding ElementName=page, Path=ActualWidth}"/> You can NOT bind data to non DepencyProperty Run:Text -->
+            <Run x:Name="ActHSize"/>
+            <LineBreak/>
+            <!--<Run x:Name="ActVSize" Text="{Binding ElementName=page, Path=AcutalHeight}"/>-->
+            <Run x:Name="ActVSize"/>
+        </TextBlock>
+    </Grid>
+</Page>
